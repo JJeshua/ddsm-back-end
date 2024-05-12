@@ -34,14 +34,12 @@ app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-// HTTP server
 const server = http.createServer(app);
 
 server.listen(8080, () => {
   console.log('Server is running on port 8080');
 });
 
-// MongoDB connection
 const MONGO_URL = 'mongodb://localhost:27017/DuckPond';
 
 mongoose.Promise = Promise;

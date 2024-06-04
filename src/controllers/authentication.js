@@ -86,7 +86,6 @@ export const login = async (req, res) => {
   await user.save();
 
   res.cookie('session_token', user.authentication.session_token, {
-    domain: 'localhost',
     path: '/',
     secure: true,
     httpOnly: true,

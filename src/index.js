@@ -25,7 +25,7 @@ const app = express();
 // app.use(limiter);
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: '*',
     credentials: true,
   })
 );
@@ -42,7 +42,7 @@ server.listen(8080, () => {
 });
 
 // MongoDB connection
-const MONGO_URL = 'mongodb://localhost:27017/DuckPond';
+const MONGO_URL = 'mongodb://mongodb:27017/DuckPond';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
